@@ -1,43 +1,42 @@
-h1
+
+h1,p
 {
     text-align: center;
 }
-.super-mario
+li 
 {
-    width: 200px;
-    position:absolute;
-    z-index: 1;
-    margin-left: 300px;
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+  
 }
-.goomba
+li:hover
 {
-    width: 200px;
-    position:absolute;
-    margin-top: 285px;
-    margin-left: 350px;
-    z-index: 2;
+    background: rgba(0, 0, 0, 0.2);
+    width: 70px;
+    height: 20px;
+    border-radius: 2px;    
+    transition: 0.7s linear ease-in-out;
 }
-.baloon
+li:active
 {
-    width: 200px;
-    position: absolute;
-    margin-left: 750px;
-    margin-top: 170px;
-    z-index: 3;
+    font-size:20px;
+    transition: 0 0.2;
+    background: rgb(130, 200, 150)
 }
-.bowser
+
+
+ol, ul 
 {
-    width: 200px;
-    position: absolute;
-    margin-left: 900px;
-    margin-top: 300px;
-    z-index: 4;
+    list-style: none;
 }
-.word
+ul, ol a, a
 {
-    width: 200px;
-    position: absolute;
-    margin-left: 760px;
-    margin-top: 215px;
-    z-index: 5;
+    text-decoration: none;
+    color: blue;
+}
+
+p
+{
+    text-align: center;
 }
