@@ -1,0 +1,73 @@
+
+h1
+{
+    font-size: 40px;
+    border: 1px solid black;
+}
+h1, h3
+{
+    color: red;
+}
+ol
+{
+    background: yellow;
+}
+ol, ul
+{
+    list-style: none;
+}
+ol li:nth-child(even)
+{
+    color: green;
+}
+ol li:nth-child(2n + 3)
+{
+    text-transform: uppercase;
+}
+li
+{
+    font-size: 20px;
+}
+li em
+{
+    font-weight: bold;
+}
+ul.linguagens li:nth-child(-n + 3)
+{
+    color: blue;
+}
+ul.linguagens li:nth-child(-n + 3):not(:first-child)
+{
+    background: pink;
+}
+ul li a
+{
+    text-decoration: none;
+}
+ul.web li a:hover
+{
+    font-weight: 900;
+}
+ul.web li a.colorA:hover
+{
+    color: orange;
+}
+ul.web li a.colorB:hover
+{
+    color: green;
+}
+ul.web li a.colorC:hover
+{
+    color: black;
+}
+ul.web li a.colorD:hover
+{
+    color: yellow;
+}
+ul.web li a.colorE:hover
+{
+    color: green;
+}
+
+
+
