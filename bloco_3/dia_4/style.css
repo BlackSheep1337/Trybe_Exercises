@@ -1,0 +1,50 @@
+body
+{
+    background: rgba(32, 143, 235, 0.301);
+    margin-left: 200px;
+    margin-right: 200px;
+}
+main
+{
+    text-align: center;
+    background: #fff;
+    font-size: 25px;
+}
+header
+{
+    display: block;
+}
+header h1
+{
+    color: black;
+    text-align: center;
+}
+header img
+{
+    margin-left: 25%;
+}
+li
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+}
+nav ul li 
+{    
+    display: inline-block;
+    margin-left: 290px;
+    font-size: 1.5em;
+    position: relative;
+}
+main article
+{
+    margin-top: 200px;
+}
+aside
+{
+    float: right;
+    float: inline-start;
+    margin: auto;
+}
