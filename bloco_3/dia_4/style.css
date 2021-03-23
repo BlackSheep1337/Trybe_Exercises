@@ -1,0 +1,81 @@
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    background-color: aqua;
+}
+header
+{
+    text-align: center;
+}
+nav
+{
+    text-align: center;
+    
+}
+nav ul li
+{
+    display: inline;
+    text-align: center;
+    padding: 10px;
+    margin: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+nav ul li:hover
+{
+    background: rgb(112, 112, 245);
+    transition: 0.2s;
+    font-weight: 500;
+    cursor: pointer;
+}
+main
+{
+    display: block;
+}
+main h1
+{
+    margin-top: 90px;
+    margin-left: 800px;
+    margin-bottom: 100px;
+}
+section
+{
+    text-align: center;
+    align-content: center;
+    margin-left: 650px;
+    display: inline-block;
+    width: 600px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+img
+{
+    width: 300px;
+}
+aside
+{
+    float: right;
+    display: block;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 250px;
+    margin-right: 100px;
+    padding: 20px;
+}
+footer
+{
+    text-align: center;
+    font-size: 1.2em;
+}
+ul li
+{
+    list-style: none;
+}
+ul li a
+{
+    text-decoration: none;
+}
