@@ -80,10 +80,66 @@ const triangle = (a, b, c) => {
         return "[ERROR]"
     } else if (a + b + c === 180) {
         return true;
-    } else if (a + b + c < 180) {
+    } else if (a + b + c < 180 || a + b + c > 180) {
         return false;
     }
 }
-console.log(triangle(0,50,100));
+console.log(triangle(50,50,800));
 
+
+//6.Recebe o nome de uma peca de xadrez e retorna o movimento dela.
+const chess = (str) => typeof str === 'string' ?  str.toLowerCase() + ' --> ' + 'diagonals' : '[ERROR]';
+console.log(chess('rei'));
+
+//7.Converter nota em porcentagem de (0 a 100) A a F
+const grades = (grade) => {
+    switch (true) {
+        case (grade >= 90):
+            console.log('A');
+        break;
+        case (grade >= 80):
+            console.log('B');
+        break;
+        case (grade >= 70):
+            console.log('C');
+        break;
+        case (grade >= 60):
+            console.log('D');
+        break;
+        case (grade >= 50):
+            console.log('E');
+        break;
+        case (grade < 50):
+            console.log('F');
+        break;
+    }
+}
+grades(98);
+
+
+//8/9.
+const isEven = (a, b, c) => {
+    let d = a + b + c;
+    if (d % 2 === 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isEven(3, 3, 2));
+
+//10.
+const productValue = (valor, custo) => {
+    if (valor <= 0 || custo <= 0) {
+        return '[ERROR] verifique os dados e tente novamente'
+    } else {
+        const valorDeCusto = custo + 20/100;
+        const lucro = valor - valorDeCusto;
+        return lucro;
+    }
+
+}
+console.log(productValue(100, 10));
+
+//11.
 
