@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia_1 DOM</title>
+</head>
+<body id="body">
+  <h2 id="page-title">Titulo</h2>
+  <p id="paragraph" class="paragraph">De uma cor para este paragrafo!</p>
+  <h4 id="subtitle">Subtitulo</h4>
+  <p id="second-paragraph" class="paragraph">Segundo paragrafo!</p>
+  
+
+  <script>
+    var paragraph = document.querySelector('#paragraph');
+    paragraph.style.color = "red";
+    paragraph.style.letterSpacing = "10px";
+
+    let title = document.querySelector('#page-title');
+    title.innerHTML = "<strong>LORD OF THE RINGS</strong>"
+    title.style.color = "green", title.style.fontSize = "5em";
+
+    let secondPrph = document.querySelector('#second-paragraph');
+    secondPrph.style.fontSize = "50px", secondPrph.style.fontWeight = "bold";
+
+    let body = document.querySelector('#body');
+    body.style.background = "black", body.style.fontFamily = "monospace",body.style.color = "green";
+
+    let subtitle = document.querySelector('#subtitle');
+    subtitle.style.color = "red";
+
+    document.querySelectorAll('.paragraph')[0].style.fontSize = "50px";
+
+    document.querySelectorAll('h4')[0].style.fontSize = "2em";
+  
+  </script>
+</body>
+</html>
