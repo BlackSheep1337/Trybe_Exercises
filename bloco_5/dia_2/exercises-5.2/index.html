@@ -15,7 +15,7 @@
       }
 
       .main-content {
-        background-color: yellow;
+        background-color: #0AF;
       }
 
       .main-content .center-content {
@@ -59,7 +59,7 @@
     <script>
       const h1 = document.createElement('h1');
       h1.innerText = "Exercises 5.2";
-      const body = document.querySelector('body'); //should son of this
+      const body = document.querySelector('body'); 
       body.appendChild(h1);
       h1.style.height = "100px"
       h1.classList.add('title');
@@ -70,6 +70,7 @@
 
       const div2 = document.createElement('div');
       div2.classList.add('center-content');
+      div2.style.backgroundColor = "#0FA";
       div.appendChild(div2);
 
       const paragraph = document.createElement('p');
@@ -82,6 +83,7 @@
 
       const div4 = document.createElement('div');
       div4.classList.add('right-content'); 
+      div4.style.marginRight = "auto";
       div.appendChild(div4);
       
       const image = document.createElement('img');
@@ -102,12 +104,12 @@
       
       for (let i = 0; i < 3; i += 1) {
         const h3 = document.createElement('h3');
-
         div.appendChild(h3)
+        h3.classList.add('description');
       }
       
-    
-
+      div.removeChild(div3);
+      div4.removeChild(ul);
      
 
       
