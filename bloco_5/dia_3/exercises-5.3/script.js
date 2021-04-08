@@ -28,3 +28,40 @@ function createDaysofTheMonth() {
   }
 }
 createDaysofTheMonth();
+
+function holyDays(str) {
+  const btn = document.createElement('button');
+  btn.innerText = str;
+  btn.classList.add('btn-holiday');
+  const div = document.querySelector('.buttons-container');
+  div.appendChild(btn);
+}
+holyDays('Feriados');
+
+function holyDaysBtn() {
+  const btnHolyDay = document.querySelector('.btn-holiday');
+  const dayHoly = document.querySelector('#days')
+  const arrDays = dayHoly.childNodes;
+
+  btnHolyDay.addEventListener('click', function(){
+    for (let i = 1; i < arrDays.length; i += 1) {
+      if (arrDays[i].innerHTML == 24 || arrDays[i].innerHTML == 25 || arrDays[i].innerHTML == 31) {
+        arrDays[i].classList.add('holiday');
+      }
+    }
+  })
+
+  btnHolyDay.addEventListener('click', function() {
+    const holy = document.querySelectorAll('.holiday');
+    for (let j = 0; j < holy.length; j += 1) {
+      if (holy[j].style.background === "rgb(255, 255, 255)") {
+        holy[j].style.background = "rgb(238,238,238)";
+      } else {
+        holy[j].style.background = "rgb(255, 255, 255)";
+      }
+    }
+  })
+
+}
+holyDaysBtn();
+
