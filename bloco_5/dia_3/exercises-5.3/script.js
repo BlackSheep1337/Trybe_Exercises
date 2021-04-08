@@ -49,7 +49,7 @@ function holyDaysBtn() {
         arrDays[i].classList.add('holiday');
       }
     }
-  })
+  });
 
   btnHolyDay.addEventListener('click', function() {
     const holy = document.querySelectorAll('.holiday');
@@ -60,8 +60,42 @@ function holyDaysBtn() {
         holy[j].style.background = "rgb(255, 255, 255)";
       }
     }
-  })
+  });
 
 }
 holyDaysBtn();
+
+function friday(str) {
+  const div = document.querySelector('.buttons-container');
+  const btnFriday = document.createElement('button');
+  btnFriday.innerHTML = str;
+  btnFriday.id = "btn_friday";
+  div.appendChild(btnFriday);
+}
+
+friday('Sexta-Feira');
+
+function callMufasa() {
+  const fridayBtn = document.querySelector('#btn_friday');
+  const fridayDays = document.querySelector('#days').childNodes;
+  const friArr = [4, 11, 18, 25];
+
+  for (let i = 0; i < fridayDays.length; i += 1) {
+    if (fridayDays[i].innerHTML == 4 || fridayDays[i].innerHTML == 11 || fridayDays[i].innerHTML == 18 || fridayDays[i].innerHTML == 25) {
+      fridayDays[i].classList.add('friday');
+    }
+  }
+  
+  fridayBtn.addEventListener('click', function() {
+    const fridayMufa = document.querySelectorAll('.friday');
+    for (let j = 0; j < fridayMufa.length; j += 1) {
+      fridayMufa[j].innerHTML == "MUFASA!!" ? fridayMufa[j].innerHTML = friArr[j] : fridayMufa[j].innerHTML = "MUFASA!!";
+    } 
+  });
+}
+callMufasa();
+
+
+
+
 
