@@ -42,11 +42,16 @@ function holyDaysBtn() {
   const btnHolyDay = document.querySelector('.btn-holiday');
   const dayHoly = document.querySelector('#days')
   const arrDays = dayHoly.childNodes;
+  const arrOfHoly = [24, 25, 31];
 
   btnHolyDay.addEventListener('click', function(){
     for (let i = 1; i < arrDays.length; i += 1) {
-      if (arrDays[i].innerHTML == 24 || arrDays[i].innerHTML == 25 || arrDays[i].innerHTML == 31) {
-        arrDays[i].classList.add('holiday');
+      const holyDay = arrDays[i];
+      
+      for (let j = 0; j < arrOfHoly.length; j += 1) {
+        if (holyDay.innerHTML == arrOfHoly[j]) {
+          holyDay.classList.add('holiday');
+        }
       }
     }
   });
@@ -80,22 +85,79 @@ function callMufasa() {
   const fridayDays = document.querySelector('#days').childNodes;
   const friArr = [4, 11, 18, 25];
 
+
   for (let i = 0; i < fridayDays.length; i += 1) {
-    if (fridayDays[i].innerHTML == 4 || fridayDays[i].innerHTML == 11 || fridayDays[i].innerHTML == 18 || fridayDays[i].innerHTML == 25) {
-      fridayDays[i].classList.add('friday');
+    const current = fridayDays[i];
+
+    for (let j = 0; j < friArr.length; j += 1) {
+      if (current.innerHTML == friArr[j]) {
+        current.classList.add('friday');
+      }
     }
   }
   
   fridayBtn.addEventListener('click', function() {
     const fridayMufa = document.querySelectorAll('.friday');
     for (let j = 0; j < fridayMufa.length; j += 1) {
-      fridayMufa[j].innerHTML == "MUFASA!!" ? fridayMufa[j].innerHTML = friArr[j] : fridayMufa[j].innerHTML = "MUFASA!!";
+      fridayMufa[j].innerHTML == "MUFASA!!" ? 
+      fridayMufa[j].innerHTML = friArr[j] : fridayMufa[j].innerHTML = "MUFASA!!";
     } 
   });
 }
 callMufasa();
 
+function mouseOver() {
+  const daysColor = document.querySelector('#days').childNodes;
+
+  for (let i = 0; i < daysColor.length; i += 1) {
+    daysColor[i].addEventListener('mouseover', changeColorAndSize);
+    daysColor[i].addEventListener('mouseleave', changeColorAndSize);
+  }  
+}
+mouseOver();
+ 
+function changeColorAndSize(e) {
+  if (e.type == 'mouseover') {
+    e.target.style.color = "#F00";
+    e.target.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+    e.target.style.fontSize = "25px";
+  } else {
+    e.target.style.color = "#777";
+    e.target.style.fontSize = "20px";
+    e.target.style.backgroundColor = "rgb(238,238,238)";
+  }
+}
 
 
+function task(str) {
+  const span = document.createElement('span');
+  const div = document.querySelector('.my-tasks');
+  span.innerHTML = str;
+  div.appendChild(span);
+}
+task('Cozinhar');
+
+function color(strColor) {
+  const createdDiv = document.createElement('div');
+  const div = document.querySelector('.my-tasks');
+  createdDiv.classList.add('task');
+  createdDiv.style.backgroundColor = strColor;
+  div.appendChild(createdDiv);
+}
+color('#A9A9A9');
+
+function taskColor() {
+  const divTask = document.querySelector('.task');
+  divTask.addEventListener('click', function(e){
+    if (e.target.classList.value === "task") {
+      e.target.classList = "task selected";
+      e.target.style.background = "#0F0";
+    } else {
+      e.target.classList = "task";
+      e.target.style.background = "#A9A9A9";
+    } 
+  });
+}
+taskColor();
 
 
