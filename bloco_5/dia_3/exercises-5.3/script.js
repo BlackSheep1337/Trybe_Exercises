@@ -135,7 +135,7 @@ function task(str) {
   span.innerHTML = str;
   div.appendChild(span);
 }
-task('Cozinhar');
+task(taskName());
 
 function color(strColor) {
   const createdDiv = document.createElement('div');
@@ -159,5 +159,41 @@ function taskColor() {
   });
 }
 taskColor();
+
+
+function handleTaskInput() {
+  const divTask = document.querySelector('.input-container');
+  const label = document.createElement('label');
+
+  divTask.style.display = "inline-block"
+  label.for = "task-input";
+  label.innerHTML = "Novo:"
+  label.style.display = "inline-block"
+
+  const input = document.createElement('input');
+  input.className = "task-input"
+  input.id = "tasks-add";
+  input.placeholder = "Escreva sua tarefa";
+  label.style.display = "inline-block"
+
+  const btnTask = document.createElement('button');
+  btnTask.id = "btn-add";
+  btnTask.innerHTML = "Adicionar";
+  btnTask.style.display = "inline-block";
+
+  divTask.appendChild(label);
+  divTask.appendChild(input);
+  divTask.appendChild(btnTask);
+
+}
+handleTaskInput();
+
+function taskName(str) {
+  //comeca por nome nas tasks
+
+
+
+
+}
 
 
