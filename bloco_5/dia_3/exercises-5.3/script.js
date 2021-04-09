@@ -129,13 +129,6 @@ function changeColorAndSize(e) {
 }
 
 
-function task(str) {
-  const span = document.createElement('span');
-  const div = document.querySelector('.my-tasks');
-  span.innerHTML = str;
-  div.appendChild(span);
-}
-task(taskName());
 
 function color(strColor) {
   const createdDiv = document.createElement('div');
@@ -166,18 +159,17 @@ function handleTaskInput() {
   const label = document.createElement('label');
 
   divTask.style.display = "inline-block"
-  label.for = "task-input";
   label.innerHTML = "Novo:"
   label.style.display = "inline-block"
 
   const input = document.createElement('input');
-  input.className = "task-input"
+  input.type = "text";
   input.id = "tasks-add";
   input.placeholder = "Escreva sua tarefa";
   label.style.display = "inline-block"
 
   const btnTask = document.createElement('button');
-  btnTask.id = "btn-add";
+  btnTask.id = "btn-add2";
   btnTask.innerHTML = "Adicionar";
   btnTask.style.display = "inline-block";
 
@@ -188,12 +180,30 @@ function handleTaskInput() {
 }
 handleTaskInput();
 
-function taskName(str) {
-  //comeca por nome nas tasks
-
-
-
-
+function createSpan() {
+  const divTask = document.querySelector('.task');
+  for (let i = 0; i < 10; i += 1) {
+    const spanTask = document.createElement('span');
+    divTask.appendChild(spanTask);
+  }
 }
+createSpan();
+
+
+
+function taskName() {
+  const inputTextStr = document.querySelector('#tasks-add');
+  const btnTaskAdd = document.querySelector('#btn-add2');
+  const div = document.querySelector('.task');
+  const arrSpan = div.childNodes;
+
+  btnTaskAdd.addEventListener('click', function() {
+    //put a string in each span of the arraySpan;
+
+  });
+
+  
+}
+taskName();
 
 
