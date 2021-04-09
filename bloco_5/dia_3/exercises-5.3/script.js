@@ -199,6 +199,7 @@ function taskName() {
 
   btnTaskAdd.addEventListener('click', function() {
     //put a string in each span of the arraySpan;
+    
 
   });
 
