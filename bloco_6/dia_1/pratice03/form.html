@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Exercicio Formulario bloco 6 dia_1</title>
+</head>
+<body>
+  <header>
+    <h1>Formulario de Curriculo</h1>
+  </header>
+
+  <form action="get">
+    <div class="form-row">
+      <fieldset>
+        <div class="form-line">
+          <label for="input-name">Nome</label>
+          <input 
+            type="text" 
+            name="name" 
+            id="input-name"
+            maxlength="40"
+            required
+          />
+        </div>
+        <div class="form-line">
+          <label for="input-email">Email</label>
+          <input 
+            type="email" 
+            name="email" 
+            id="input-email"
+            maxlength="50"
+            required
+          />
+        </div>
+        <div class="form-line">
+          <label for="input-cpf">CPF</label>
+          <input 
+            type="text" 
+            name="CPF" 
+            id="input-cpf"
+            maxlength="11"
+            required
+          />
+        </div>
+        <div class="form-line">
+          <label for="input-endereco">Endereco</label>
+          <input 
+            type="text" 
+            name="endereco" 
+            id="input-endereco"
+            maxlength="200"
+            required
+          />
+        </div>
+        <div class="form-line">
+          <label for="input-cidade">Cidade</label>
+          <input 
+            type="text" 
+            name="cidade" 
+            id="input-cidade"
+            maxlength="28"
+            required
+          />
+          <label for="input-estado">UF</label>
+          <select 
+            name="estado" 
+            id="input-estado" 
+            required>
+          </select>
+        </div>
+        <div class="form-line">
+          <fieldset class="largadouro">
+            <legend>Tipo de Largadouro</legend>
+            <input 
+              type="radio" 
+              name="residencia" 
+              id="casa" 
+              checked
+            />
+            <label for="casa">Casa</label>
+            <input 
+              type="radio" 
+              name="residencia" 
+              id="apartamento"
+            />
+            <label for="apartamento">Apartamento</label>
+          </fieldset>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="form-line">
+          <label for="textarea">Resumo</label>
+          <textarea 
+            name="textarea" 
+            id="textarea" 
+            cols="30" 
+            rows="10"
+            maxlength="1000"
+            style="resize: none;"
+            required>
+          </textarea>
+      </div>
+      <div class="form-line">
+        <label for="input-cargo">Cargo</label>
+        <input 
+          type="text" 
+          name="cargo" 
+          id="input-cargo"
+          required
+          maxlength="40"
+        />
+      </div>
+      <div class="form-line">
+        <label for="input-descricao-cargo">Decricao do cargo</label>
+        <input 
+          type="text" 
+          name="descricao do cargo" 
+          id="input-descricao-cargo"
+          maxlength="500"
+          required
+        />
+      </div>
+      <div class="form-line">
+        <label for="data-inicio">Data de inicio</label>
+        <input 
+          type="text"
+          placeholder="dd/mm/yyyy" 
+          name="data-inicio" 
+          id="input-inicio-data"
+          required
+        />
+      <div class="form-line">
+        <button 
+          type="submit" 
+          onclick="submitForm();
+          ">Enviar
+        </button>
+        <button
+        type="submit"
+        onclick="clearAllCamps();"
+        >Limpar</button>
+      </div>
+    </fieldset>
+    </div>
+  </form>
+  <div class="show-form">
+    <ul class="items-form"></ul>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
