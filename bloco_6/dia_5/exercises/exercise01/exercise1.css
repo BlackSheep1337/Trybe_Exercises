@@ -1,0 +1,60 @@
+body {
+  font-size: 1.2em;
+  margin: 20px;
+}
+h1 {
+  font-size: 1.6em;
+}
+h2 {
+  font-size: 1.4em;
+}
+
+img {
+  max-width: 100%;
+  padding: 10px 0;
+}
+
+figure {
+  margin: 20px;
+}
+
+@media screen and (min-width: 550px) {
+  body {
+    font-size: 1.3em;
+    margin: 50px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .cats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .col {
+    flex: 0 0 calc(33.33% - 30px);
+    margin: 5px;
+    padding: 0 20px;
+  }
+
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-color: antiquewhite;
+    font-size: 1.3em;
+    margin: 0 100px;
+    max-width: 1300px;
+  }
+}
