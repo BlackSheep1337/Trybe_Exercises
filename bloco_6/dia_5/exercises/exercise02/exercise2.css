@@ -7,3 +7,81 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-color: antiquewhite;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.815);
+  color: white;
+}
+
+.title nav {
+  display: none;
+}
+
+.aside-one {
+  display: flex;
+  flex-flow: column;
+  margin: 10px 20px;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.aside-two {
+  display: flex;
+  margin: 10px 20px;
+  flex-flow: column;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.main-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 10px 20px;
+  font-size: 1.5em;
+}
+
+.main-content h1 {
+  font-size: 1.3em;
+}
+
+.footer {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  margin: 10px 20px;
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 1200px) {
+  .title {
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.3em;
+  }
+
+  .title nav {
+    display: flex;
+  }
+
+  .title nav ul {
+    list-style: none;
+  }
+
+  .title nav ul li {
+    display: inline;
+    padding: 0 10px;
+  }
+
+  .title nav ul li:hover {
+    color: grey;
+  }
+
+}
