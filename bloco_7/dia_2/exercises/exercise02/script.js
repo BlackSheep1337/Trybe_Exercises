@@ -69,7 +69,7 @@ const mathStudents = (obj) => {
   for (i in values) {
     if (values[i].materia === 'Matemática') {
       count += values[i].numeroEstudantes;
-    } 
+    }
   }
   return count;
 }
