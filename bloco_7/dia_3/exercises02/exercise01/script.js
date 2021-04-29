@@ -1,5 +1,6 @@
 const assert = require('assert');
 // escreva a função addOne aqui
+const addOne = (arr) =>  arr.map((a) => a + 1);
 
 const myArray = [31, 57, 12, 5];
 const unchanged = [31, 57, 12, 5];
