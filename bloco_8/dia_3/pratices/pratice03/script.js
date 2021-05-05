@@ -73,17 +73,46 @@ const estudantes = [
   },
 ];
 
-const estudantesManha = [];
+// const estudantesManha = [];
 
-for (let i in estudantes) {
-  if (estudantes[i].turno === 'Manhã') {
-    estudantesManha.push(`${estudantes[i].nome} ${estudantes[i].sobrenome}`);
-  }
+// for (let i in estudantes) {
+//   if (estudantes[i].turno === 'Manhã') {
+//     estudantesManha.push(`${estudantes[i].nome} ${estudantes[i].sobrenome}`);
+//   }
+// }
+
+// console.log(estudantesManha);
+
+// const matinal = estudantes.filter((person) => person.turno === 'Manhã')
+//   .map((person) => `${person.nome} ${person.sobrenome}`);
+
+// console.table(matinal);
+
+// const findStudent = (name, students) => {
+//   for (let i in students) {
+//     if (students[i].nome === name) return students[i];
+//   }
+// }
+
+// const reportStatus = (student) => {
+//   const report = [];
+//   for (let i in student.materias) {
+//     if (student.materias[i].nota >= 60) {
+//       report.push(`${student.materias[i].name} Aprovado`);
+//     } else {
+//       report.push(`${student.materias[i].name} Reprovado`);
+//     }
+//   }
+//   return report;
+// }
+
+// console.log(reportStatus(findStudent('Natalia', estudantes)));
+
+const reportStatus = (name, students) => {
+  const studentInfo = students.find((student) => (student.nome === name));
+  return studentInfo.materias.map((materia) => (
+    `${materia.name} ${(materia.nota >= 60) ? 'Aprovado' : 'Reprovado'}`
+  ));
 }
 
-console.log(estudantesManha);
-
-const matinal = estudantes.filter((person) => person.turno === 'Manhã')
-  .map((person) => `${person.nome} ${person.sobrenome}`);
-
-console.table(matinal);
+console.table(reportStatus('Jorge', estudantes));
