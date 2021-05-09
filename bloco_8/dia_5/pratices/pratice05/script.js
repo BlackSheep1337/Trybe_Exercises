@@ -14,3 +14,4 @@ const halfData = data.map((person) => (
 ))
 
 console.log(halfData);
+
