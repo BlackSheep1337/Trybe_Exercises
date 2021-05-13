@@ -1,42 +1,3 @@
-// const fetchPokemon = () => {
-//   fetch('https://pokeapi.co/api/v2/pokemon/squirtle')
-//     .then((response) => {
-//       response.json()
-//         .then((data) => {
-//           appendPokemon(data);
-          
-//           fetch('https://pokeapi.co/api/v2/pokemon/bulbasaur')
-//           .then((response) => {
-//             response.json()
-//               .then((data) => {
-//                 appendPokemon(data);
-                
-//                 fetch('https://pokeapi.co/api/v2/pokemon/charmander')
-//                 .then((response) => {
-//                   response.json()
-//                     .then((data) => {
-//                       appendPokemon(data);
-//                       fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
-//                       .then((response) => {
-//                         response.json()
-//                           .then((data) => {
-//                             appendPokemon(data);
-//                           });
-//                       });
-//                     });
-//                 });
-//               });
-//           });
-//         });
-//     });
-// }
-// fetchPokemon();
-
-const getPokemon = () => {
-  
-};
-
-
 const appendPokemon = (data) => {
   const ul = document.querySelector('ul');
   const li = document.createElement('li');
@@ -48,6 +9,54 @@ const appendPokemon = (data) => {
   ul.appendChild(li);
 }
 
-const abilitiesHandle = (data) => {
+// const getPokemon = (pokemonName, callback) => {
+//   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+//     .then((response) => {
+//       response.json().then((data) => {
+//         appendPokemon(data);
+//         callback ? callback() : undefined;
+//       })
+//     });
+// };
 
+// const fetchPokemon = () => {
+//   getPokemon('pikachu', 
+//   getPokemon('charmander'),
+//   getPokemon('squirtle'),
+//   getPokemon('bulbasaur'));
+// }
+
+const getPokemonPromise = (pokemonName) => {
+  return new Promise((resolve, reject) => {
+    if (pokemonName === 'zubat') {
+      reject('Erro, pokemon foda!!');
+    } else {
+      fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+      .then((response) => {
+        response.json().then((data) => {
+          appendPokemon(data);
+          resolve();
+        });
+      })
+    }
+  })
+};
+
+const fetchPokemon = async () => {
+  try {
+    await getPokemonPromise('pikachu');
+    await getPokemonPromise('bulbasaur');
+    await getPokemonPromise('charizard');
+    await getPokemonPromise('zubat');
+
+  } catch(error) {
+    console.log(error);
+  }
 }
+
+
+
+
+
+
+window.onload = fetchPokemon();
