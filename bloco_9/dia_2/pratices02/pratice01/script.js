@@ -55,8 +55,4 @@ const fetchPokemon = async () => {
 }
 
 
-
-
-
-
 window.onload = fetchPokemon();
