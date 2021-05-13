@@ -13,10 +13,10 @@ fetchPokemon();
 const imageHandle = (data) => {
   const img = document.createElement('img');
   const elem = document.getElementById('pokemon');
-  img.setAttribute('src', data.sprites.front_shiny);
-  elem.appendChild(img);
+  img.src = data.sprites.front_default;
+  elem.innerHTML = `${data.name} <br> ${img.outerHTML}`;
 }
 
 const abilitiesHandle = (data) => {
-  
+
 }
